@@ -1,8 +1,16 @@
-#include <stdio.h>
+#include <stdio.h> 
 
-int main() {
-   int n1, n2;
-   scanf("%i %i", &n1, &n2);
-   printf("SOMA = %i\n", n1+n2);
-   return 0;
+/*
+Programa para realizar a soma de dois números
+*/
+int main(){
+    int num1, num2;
+    int soma = 0;
+
+    scanf("%d", &num1);
+    scanf("%d", &num2);
+
+    soma = num1 + num2;
+
+    printf("SOMA = %d", soma);
 }
