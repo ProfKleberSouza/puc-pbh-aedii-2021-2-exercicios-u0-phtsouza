@@ -4,7 +4,7 @@ int main(){
 
     int numero;
 
-    printf("Informe um numero qualquer: ");
+    // printf("Informe um numero qualquer: ");
     scanf("%d",&numero);
 
     if (numero>0){
