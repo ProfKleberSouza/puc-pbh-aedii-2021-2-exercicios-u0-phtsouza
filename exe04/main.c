@@ -9,10 +9,10 @@ int main(){
         scanf ("%d", &n[i]);
     }
 
-    menor = n[2];
-    maior = n[0];
+    menor = n[2]; // Define o menor valor inicial
+    maior = n[0]; // Define o maior valor inicial
 
-    for(int i = 0; i <=2; i++){
+    for(int i = 0; i <=2; i++){ // Faz a comparação pra procurar os valores
         if(n[i]<menor){
             menor = n[i];
         }
