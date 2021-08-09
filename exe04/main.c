@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/*
+Programa para achar o menor e maior numero dentro de um vetor.
+Entrada: 3 valores.
+Saida: O maior e o menor numero entre os 3.
+*/
 int main(){
     int n[3];
     int menor, maior;
