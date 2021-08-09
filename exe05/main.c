@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/*
+Programa feito para calcular a media de 4 notas e falar caso o aluno seja aprovado ou nao.
+Entrada: 4 notas.
+Saida: Informa se o aluno foi aprovado caso sua media seja maior ou igual a 6.
+*/
 int main(){
 
     float notas[3];
