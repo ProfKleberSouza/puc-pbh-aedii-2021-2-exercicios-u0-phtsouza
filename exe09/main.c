@@ -6,8 +6,40 @@ struct aluno {
    char nome[50];
 };
 
-void ordemAlfabetica(struct aluno Sala[]){
-   
+void ordemAlfabetica(struct aluno Sala[], int N){
+   if(strcmp(Sala[N-3].nome, Sala[N-2].nome) > 0 && strcmp(Sala[N-1].nome, Sala[N-2].nome)> 0){
+      printf("%s %.1f\n", Sala[N - 2].nome, Sala[N - 2].nota);
+      if(strcmp(Sala[N - 3].nome, Sala[N - 1].nome)>0){
+         printf("%s %.1f\n", Sala[N - 1].nome, Sala[N - 1].nota);
+         printf("%s %.1f", Sala[N - 3].nome, Sala[N - 3].nota);
+      }
+      else{
+         printf("%s %.1f\n", Sala[N - 3].nome, Sala[N - 3].nota);
+         printf("%s %.1f", Sala[N - 1].nome, Sala[N - 1].nota);
+      }
+   }
+   else if(strcmp(Sala[N-3].nome, Sala[N-1].nome) > 0 && strcmp(Sala[N-2].nome, Sala[N-1].nome)> 0){
+      printf("%s %.1f\n", Sala[N - 1].nome, Sala[N - 1].nota);
+      if(strcmp(Sala[N - 3].nome, Sala[N - 2].nome)>0){
+         printf("%s %.1f\n", Sala[N - 2].nome, Sala[N - 2].nota);
+         printf("%s %.1f", Sala[N - 3].nome, Sala[N - 3].nota);
+      }
+      else{
+         printf("%s %.1f\n", Sala[N - 3].nome, Sala[N - 3].nota);
+         printf("%s %.1f", Sala[N - 2].nome, Sala[N - 2].nota);
+      }
+   }
+   else{
+      printf("%s %.1f\n", Sala[N - 3].nome, Sala[N - 3].nota);
+      if(strcmp(Sala[N - 1].nome, Sala[N - 2].nome)>0){
+         printf("%s %.1f\n", Sala[N - 2].nome, Sala[N - 2].nota);
+         printf("%s %.1f", Sala[N - 1].nome, Sala[N - 1].nota);
+      }
+      else{
+         printf("%s %.1f\n", Sala[N - 1].nome, Sala[N - 1].nota);
+         printf("%s %.1f", Sala[N - 2].nome, Sala[N - 2].nota);
+      }
+   }
 }
 
 int main() {
@@ -15,17 +47,15 @@ int main() {
    char aux2[50];
    float mediaNotas;
 
-   printf("Quantos alunos deseja registrar?");
+   //printf("Quantos alunos deseja registrar?");
    scanf("%d",&qntdAlunos);
    
    struct aluno Aluno[qntdAlunos];
 
    for(int i=0; i<qntdAlunos; i++){
-      printf("Informe o nome do aluno: ");
-      scanf("%s", &Aluno[i].nome);
+      //printf("Informe o nome do aluno: ");
+      scanf("%s %f", &Aluno[i].nome, &Aluno[i].nota);
       fflush(stdin);
-      printf("Informe a nota do aluno: ");
-      scanf("%f", &Aluno[i].nota);
       notaTotal += Aluno[i].nota;
    }
 
@@ -37,18 +67,15 @@ int main() {
             Aluno[x].nota = aux;
 
             strcpy(aux2, Aluno[j].nome);
-            strcpy(Aluno[x].nome, Aluno[j].nome);
-            strcpy(aux2, Aluno[x].nome);
+            strcpy(Aluno[j].nome, Aluno[x].nome);
+            strcpy(Aluno[x].nome, aux2);
          }
       }
    }
 
-   for(int y=0; y<qntdAlunos; y++){
-      printf("%s : %f\n", Aluno[y].nome, Aluno[y].nota);
-   }
+   mediaNotas = notaTotal/(qntdAlunos*1.0);
 
-   mediaNotas = notaTotal/qntdAlunos;
-
-   printf("NOTA MEDIA = %.2f", mediaNotas);
+   printf("NOTA MEDIA = %.1f\n", mediaNotas);
+   ordemAlfabetica(Aluno, qntdAlunos);
 
 }
