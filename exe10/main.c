@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/*
+Programa feito para mostrar os numeros na ordem inversa pelo qual o usuario enviou
+Entrada: 10 valores aleatorios.
+Saida: Os valores printados de tras pra frente.
+*/
 int main() {
    int vet[10];
 
