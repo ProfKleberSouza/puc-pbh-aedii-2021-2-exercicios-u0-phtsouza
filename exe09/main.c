@@ -6,6 +6,10 @@ struct aluno {
    char nome[50];
 };
 
+void ordemAlfabetica(struct aluno Sala[]){
+   
+}
+
 int main() {
    int qntdAlunos, notaTotal = 0, aux;
    char aux2[50];
