@@ -8,27 +8,23 @@ Saida: O maior e o menor número dentre os informados.
 int main(){
 
     int i;
-    int menor, maior;
+    int menor, maior, aux;
     // printf("Informe quantos numeros deseja passar: ");
     scanf("%d",&i); // Armazena o tamanho do vetor.
-    int vet[i];
+    scanf("%d",&aux); 
+    maior = aux;
+    menor = aux;
 
-    for(int j=0; j<i;j++){
-        // printf("Informe um numero: ");
-        scanf("%d",&vet[j]);
-    }
-
-    menor = vet[i];
-    maior = vet[0];
-
-    for(int j = 0; j < i; j++){
-        if(vet[j]<menor){
-            menor = vet[j];
+    for(int j = 0; j<i-1; j++){
+        scanf("%d",&aux); 
+        if(aux < menor){
+            menor = aux;
         }
-        if(vet[j]>=maior){
-            maior = vet[j];
+        if(aux > maior){
+            maior = aux;
         }
     }
+
     printf("MENOR = %d\n", menor);
     printf("MAIOR = %d", maior);
 }
