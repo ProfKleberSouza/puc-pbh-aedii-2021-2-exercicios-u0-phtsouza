@@ -6,16 +6,13 @@ Saida: Informa se o aluno foi aprovado caso sua media seja maior ou igual a 6.
 */
 int main(){
 
-    int notas[4];
+    int n1, n2, n3, n4;
     float soma=0;
     float media;
 
-    for(int i=0; i<4; i++){
-        // printf("Informe sua nota: ");
-        scanf("%d",&notas[i]);
-        soma += notas[i];
-    }
-
+    // printf("Informe sua nota: ");
+    scanf("%d %d %d %d", &n1, &n2, &n3, &n4);
+    soma = n1 + n2 + n3 + n4;
     media = soma/4.0;
 
     if(media>=6){
