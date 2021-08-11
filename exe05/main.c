@@ -6,7 +6,7 @@ Saida: Informa se o aluno foi aprovado caso sua media seja maior ou igual a 6.
 */
 int main(){
 
-    float notas[3];
+    float notas[4];
     float soma=0;
     float media;
 
@@ -19,7 +19,7 @@ int main(){
     media = soma/4;
 
     if(media>=6){
-        printf("NOTA = %.1f (APROVADO)\n",media);
+        printf("NOTA = %.1f (APROVADO)",media);
     }
     else{
         printf("NOTA = %.1f (REPROVADO)", media);
