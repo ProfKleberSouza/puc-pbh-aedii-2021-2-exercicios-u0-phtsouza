@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 /*
 Programa feito para informar o maior e o menor informado pelo usuario.

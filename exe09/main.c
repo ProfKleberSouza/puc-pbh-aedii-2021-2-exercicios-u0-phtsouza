@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#define MAX 1000
 /*
 Programa feito para calcular a media das notas dos alunos e informar as 3 maiores notas em ordem alfabética.
 Entrada: numero de alunos que deseja informar, seus nomes e suas notas.
@@ -59,7 +60,7 @@ int main() {
    //printf("Quantos alunos deseja registrar?");
    scanf("%d",&qntdAlunos);
    
-   struct aluno Aluno[qntdAlunos]; // Criação da struct com o tamanho da sala.
+   struct aluno Aluno[MAX]; // Criação da struct com o tamanho da sala.
 
    for(int i=0; i<qntdAlunos; i++){
       //printf("Informe o nome do aluno: ");
